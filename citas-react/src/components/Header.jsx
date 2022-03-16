@@ -1,7 +1,4 @@
-function Header(props /* { props } */) {
-
-  console.log(props)
-  //console.log(numeros)
+function Header() {
 
   return(
     <>

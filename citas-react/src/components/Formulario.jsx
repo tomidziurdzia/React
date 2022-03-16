@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 
-const Formulario = () => {
+const Formulario = ({ pacientes, setPacientes }) => {
 
   const [nombre, setNombre] = useState('')
   const [propietario, setPropietario] = useState('')
@@ -16,11 +16,28 @@ const Formulario = () => {
 
     // Validacion del formulario
     if([nombre, propietario, email, fecha, sintomas].includes('')) {
-      console.log('Hay al menos un campo vacio')
       setError(true)
       return
     }
       setError(false)
+
+      // Objeto de paciente
+      const objetoPaciente = {
+        nombre, 
+        propietario, 
+        email, 
+        fecha, 
+        sintomas
+      }
+
+      setPacientes([...pacientes, objetoPaciente])
+
+      // Reiniciar form
+      setNombre('')
+      setPropietario('')
+      setEmail('')
+      setFecha('')
+      setSintomas('')
   }
 
   return (
