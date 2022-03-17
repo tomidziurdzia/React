@@ -6,7 +6,7 @@ const ControlPresupuesto = ({presupuesto}) => {
       </div>
       <div className="contenido-presupuesto">
         <p>
-          <span>Presupuesto:</span> ${presupuesto}
+          <span>Presupuesto:</span> {presupuesto}
         </p>
       </div>
     </div>
