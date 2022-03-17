@@ -69,7 +69,6 @@ header h1 {
     font-size: 3.6rem;
     text-align: center;
     display: block;
-    text-transform: uppercase;
     color: var(--blanco);
     margin-bottom: 4rem;
     padding-bottom: 1rem;
