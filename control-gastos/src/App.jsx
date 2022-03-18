@@ -7,7 +7,7 @@ import IconoNuevoGasto from './img/nuevo-gasto.svg'
 
 function App() {
 
-  const [presupuesto, setPresupuesto] = useState('')
+	const [presupuesto, setPresupuesto] = useState('')
   const [isValidPresupuesto, setIsValidPresupuesto] = useState(false)
 
   const [modal, setModal] = useState(false)
@@ -19,13 +19,15 @@ function App() {
 
   useEffect(() => {
     if(Object.keys(gastoEditar).length > 0) {
-      
+      handleNuevoGasto()
     }
   }, [gastoEditar])
 
   const handleNuevoGasto = () => {
     setModal(true)
 
+    setGastoEditar('')
+    
     setTimeout(() => {
       setAnimarModal(true)
     }, 500);
@@ -68,7 +70,7 @@ function App() {
               onClick={handleNuevoGasto}
             />
           </div>
-        </>
+        </> 
       )}
 
       {modal && <Modal 
@@ -76,6 +78,7 @@ function App() {
                   animarModal={animarModal}
                   setAnimarModal={setAnimarModal}
                   guardarGasto={guardarGasto}
+                  gastoEditar={gastoEditar}
                 />}
 
     </div>
