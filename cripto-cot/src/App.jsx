@@ -41,10 +41,20 @@ const Heading = styled.h1`
 
 function App() {
   const [monedas, setMonedas] = useState({});
+  const [resultado, setResultado] = useState({})
 
   useEffect(() => {
     if (Object.keys(monedas).length > 0) {
-      console.log(monedas);
+      const cotizarCripto = async () => {
+        const {moneda, criptomoneda} = monedas
+        const url = `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${criptomoneda}&tsyms=${moneda}`
+
+        const respuesta = await fetch(url)
+        const resultado = await respuesta.json()
+
+        setResultado(resultado.DISPLAY[criptomoneda][moneda])
+      }
+      cotizarCripto()
     }
   }, [monedas]);
   return (
@@ -53,8 +63,7 @@ function App() {
       <div>
         <Heading>Cotiza Criptomonedas al Instante</Heading>
         <Formulario setMonedas={setMonedas} />
-      </div>
-      dqwdwqdqwdw
+      </div>  
     </Contenedor>
   );
 }
