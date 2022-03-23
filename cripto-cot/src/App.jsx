@@ -54,6 +54,7 @@ function App() {
         <Heading>Cotiza Criptomonedas al Instante</Heading>
         <Formulario setMonedas={setMonedas} />
       </div>
+      dqwdwqdqwdw
     </Contenedor>
   );
 }
