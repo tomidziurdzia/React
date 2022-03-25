@@ -16,6 +16,7 @@ const CotizadorProvider = ({ children }) => {
   });
 
   const [error, setError] = useState("");
+  const [resultado, setResultado] = useState(0);
 
   const handleChangeDatos = (e) => {
     setDatos({
@@ -42,11 +43,20 @@ const CotizadorProvider = ({ children }) => {
 
     // Formatear dinero
     resultado = formatearDinero(resultado);
+
+    setResultado(resultado);
   };
 
   return (
     <CotizadorContext.Provider
-      value={{ datos, handleChangeDatos, error, setError, cotizarSeguro }}
+      value={{
+        datos,
+        handleChangeDatos,
+        error,
+        setError,
+        cotizarSeguro,
+        resultado,
+      }}
     >
       {children}
     </CotizadorContext.Provider>
