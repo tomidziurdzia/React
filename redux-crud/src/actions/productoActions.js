@@ -96,6 +96,9 @@ export function borrarProductoAction(id) {
     try {
       await clienteAxios.delete(`/productos/${id}`);
       dispatch(eliminarProductoExito());
+
+      // SE elimina, mostrar alerta
+      Swal.fire("Deleted!", "Your file has been deleted.", "success");
     } catch (error) {
       console.log(error);
       dispatch(eliminarProductoError());
