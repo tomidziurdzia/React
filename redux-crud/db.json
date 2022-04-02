@@ -1,11 +1,6 @@
 {
   "productos": [
     {
-      "id": 1,
-      "nombre": "Jugo de Zanahoria",
-      "precio": "31111"
-    },
-    {
       "id": 2,
       "nombre": "Jugo de Naranja",
       "precio": "1"
@@ -34,71 +29,6 @@
       "nombre": "dqwdwqd",
       "precio": 12321,
       "id": 7
-    },
-    {
-      "nombre": "dqwdwqd",
-      "precio": 12321,
-      "id": 8
-    },
-    {
-      "nombre": "dqwdwqd",
-      "precio": 12321,
-      "id": 9
-    },
-    {
-      "nombre": "vdfvsd",
-      "precio": 3432,
-      "id": 10
-    },
-    {
-      "nombre": "vdfvsd",
-      "precio": 3432,
-      "id": 11
-    },
-    {
-      "nombre": "vdfvsd",
-      "precio": 3432,
-      "id": 12
-    },
-    {
-      "nombre": "vdfvsd",
-      "precio": 3432,
-      "id": 13
-    },
-    {
-      "nombre": "vdfvsd",
-      "precio": 3432,
-      "id": 14
-    },
-    {
-      "nombre": "vdfvsd",
-      "precio": 3432,
-      "id": 15
-    },
-    {
-      "nombre": "vdfvsd",
-      "precio": 3432,
-      "id": 16
-    },
-    {
-      "nombre": "vdfvsd",
-      "precio": 3432,
-      "id": 17
-    },
-    {
-      "nombre": "12321",
-      "precio": 2313,
-      "id": 18
-    },
-    {
-      "nombre": "fwefew",
-      "precio": 1312,
-      "id": 19
-    },
-    {
-      "nombre": "Tomas",
-      "precio": 123,
-      "id": 20
     }
   ]
 }
