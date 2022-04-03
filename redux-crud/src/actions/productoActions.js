@@ -141,15 +141,17 @@ export function editarProductoAction(producto) {
   return async (dispatch) => {
     dispatch(editarProducto(producto));
     try {
-      const resultado = await clienteAxios.put(
-        `/productos/${producto.id}`,
-        producto
-      );
+      await clienteAxios.put(`/productos/${producto.id}`, producto);
+      dispatch(editarProductoExito(producto));
     } catch (error) {}
   };
 }
 
-const editarProducto = (producto) => ({
+const editarProducto = () => ({
   type: COMENZAR_DESCARGA_PRODUCTOS,
+});
+
+const editarProductoExito = (producto) => ({
+  type: PRODUCTO_EDITADO_EXITO,
   payload: producto,
 });
