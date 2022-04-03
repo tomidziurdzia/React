@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 // Actions en Redux
 import { crearNuevoProductoAction } from "../actions/productoActions";
 
-import { mostrarAlerta } from "../actions/alertaActions";
+import { mostrarAlerta, ocultarAlertaAction } from "../actions/alertaActions";
 
 const NuevoProducto = ({ history }) => {
   // State del componente
@@ -38,7 +38,7 @@ const NuevoProducto = ({ history }) => {
     }
 
     // Revisar que no hay errores
-
+    dispatch(ocultarAlertaAction());
     // Crear nuevo producto
     agregarProducto({
       nombre,

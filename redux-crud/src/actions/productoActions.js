@@ -11,7 +11,6 @@ import {
   OBTENER_PRODUCTO_EDITAR,
   PRODUCTO_EDITADO_EXITO,
   PRODUCTO_EDITADO_ERROR,
-  COMENZAR_EDICION_PRODUCTO,
 } from "../types";
 
 import clienteAxios from "../config/axios";
@@ -143,7 +142,9 @@ export function editarProductoAction(producto) {
     try {
       await clienteAxios.put(`/productos/${producto.id}`, producto);
       dispatch(editarProductoExito(producto));
-    } catch (error) {}
+    } catch (error) {
+      dispatch(editarProductoError());
+    }
   };
 }
 
@@ -154,4 +155,9 @@ const editarProducto = () => ({
 const editarProductoExito = (producto) => ({
   type: PRODUCTO_EDITADO_EXITO,
   payload: producto,
+});
+
+const editarProductoError = () => ({
+  type: PRODUCTO_EDITADO_ERROR,
+  payload: true,
 });

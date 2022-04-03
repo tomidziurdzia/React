@@ -14,6 +14,7 @@ const Productos = () => {
       dispatch(obtenerProductosAction());
     };
     cargarProductos();
+    // eslint-disable-next-line
   }, []);
 
   // Obtener el state
